@@ -1,7 +1,6 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 end
-
 class Weather
 
   attr_reader :zip
