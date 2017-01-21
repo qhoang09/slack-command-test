@@ -21,10 +21,7 @@ class Weather
     data["icon_url"]
   end
 
-
-  private
-
-    def data
-      @data ||= HTTParty.get("http://api.wunderground.com/api/#{ENV['WUNDERGROUND_KEY']}/conditions/q/#{zip}.json")["current_observation"]["display_location"]
-    end
+	def data
+	  @data ||= HTTParty.get("http://api.wunderground.com/api/#{ENV['WUNDERGROUND_KEY']}/conditions/q/#{zip}.json")["current_observation"]["display_location"]
+	end
 end

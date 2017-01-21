@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
     render json: { response_type: "in_channel" }, status: :created
   end
 
-  private
+  
 
     def valid_slack_token?
       params[:token] == ENV["SLACK_SLASH_COMMAND_TOKEN"]
